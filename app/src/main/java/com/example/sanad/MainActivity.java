@@ -5,37 +5,35 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
-
 import com.firebase.ui.auth.ErrorCodes;
 import com.firebase.ui.auth.IdpResponse;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.FirebaseUserMetadata;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.Arrays;
 import java.util.List;
 
 import com.firebase.ui.auth.AuthUI;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 
 public class MainActivity extends AppCompatActivity {
-    private String id;
     private static final int RC_SIGN_IN = 1;
     private FirebaseDatabase mFirebaseDatabase;
     private DatabaseReference mDatabaseReference;
     private FirebaseAuth mAuth;
     private FirebaseUser user;
-    private boolean flag = true;
-    static String LoggedIn_User_Email;
-    View layout;
-    Snackbar showSnackbar;
+
+
     List<AuthUI.IdpConfig> providers = Arrays.asList(
             new AuthUI.IdpConfig.EmailBuilder().build(),
             new AuthUI.IdpConfig.PhoneBuilder().setDefaultCountryIso("jo").build(),
             new AuthUI.IdpConfig.GoogleBuilder().build());
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,27 +44,28 @@ public class MainActivity extends AppCompatActivity {
         mDatabaseReference = mFirebaseDatabase.getReference("Users");
         mAuth = FirebaseAuth.getInstance();
     }
+
     // Check if user is signed in (non-null) and update UI accordingly.
     @Override
     protected void onStart() {
         super.onStart();
         FirebaseUser currentUser = mAuth.getCurrentUser();
         //  updateUI(currentUser);
-        if(currentUser != null){
+        if (currentUser != null) {
             FirebaseUserMetadata metadata = mAuth.getCurrentUser().getMetadata();
             if (metadata.getCreationTimestamp() == metadata.getLastSignInTimestamp()) {
                 // The user is new, show them a fancy intro screen!
-                Intent intent = new Intent(this,set_information.class);
+                Intent intent = new Intent(this, Welcome.class);
                 startActivity(intent);
                 finish();
             } else {
                 // This is an existing user, show them a welcome back screen.
-                Intent intent = new Intent(this,Home.class);
+                Intent intent = new Intent(this, Home.class);
                 startActivity(intent);
                 finish();
             }
 
-        }else{
+        } else {
             startActivityForResult(
                     AuthUI.getInstance()
                             .createSignInIntentBuilder()
@@ -96,12 +95,12 @@ public class MainActivity extends AppCompatActivity {
                 FirebaseUserMetadata metadata = mAuth.getCurrentUser().getMetadata();
                 if (metadata.getCreationTimestamp() == metadata.getLastSignInTimestamp()) {
                     // The user is new, show them a fancy intro screen!
-                    Intent intent = new Intent(this,set_information.class);
+                    Intent intent = new Intent(this, Welcome.class);
                     startActivity(intent);
                     finish();
                 } else {
                     // This is an existing user, show them a welcome back screen.
-                    Intent intent = new Intent(this,Home.class);
+                    Intent intent = new Intent(this, Home.class);
                     startActivity(intent);
                     finish();
                 }

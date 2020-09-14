@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#feffff</color>
-    <color name="colorPrimaryDark">#263238</color>
-    <color name="colorAccent">#EA970E</color>
+    <color name="colorPrimaryDark">#0D4497</color>
+    <color name="colorAccent">#6DCB7A</color>
     <color name="turquoise">#30897E</color>
     <color name="light_turquoise">#34BEBD</color>
     <color name="blue">#17335A</color>
-    <color name="darkgrey">#0C227C</color>
+    <color name="darkgrey">#255194</color>
     <color name="white">#FFFFFF</color>
-    <color name="grey">#90A4AE</color>
-    <color name="darkOrange">#EA970E</color>
-    <color name="orange">#F5B955</color>
-    <color name="midGray">#4A578C</color>
+    <color name="grey">#60BFD8</color>
+    <color name="darkOrange">#6DCB7A</color>
+    <color name="orange">#69C9AE</color>
+    <color name="midGray">#3A81D2</color>
 </resources>
