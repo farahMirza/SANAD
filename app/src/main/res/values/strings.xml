@@ -1,3 +1,86 @@
 <resources>
     <string name="app_name">sanad</string>
+    <string name="mobile">Enter Mobile</string>
+    <string name="password">Password</string>
+    <string name="login">LOGIN</string>
+    <string name="forget_password">FORGET PASSWORD?</string>
+    <string name="signup">SIGNUP</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="google_maps_key">AIzaSyAxvS4sX2MNwbT7Jp_c7PMJMVzVTyAGSBk</string>
+    <string name="facebook_application_id" translatable="false">300791960483158</string>
+    <string name="fb_login_protocol_scheme">fb300791960483158</string>
+    <string name="No_appointment">There is no appointment right now</string>
+    <string name="about_description">SANAD is health care mobile app for home assistance for patients who can"'t go out for treatment.Using this app will able provider to see all the appointments and visit the patients home to provide caring-service for them .</string>
+    //add it for picker
+    <string name="action_settings">Settings</string>
+    <string name="but_done">Done</string>
+    <string name="title_tab_start_date">Start Date</string>
+    <string name="ttile_tab_end_date">End Date</string>
+
+    <string name="choose_date">Choose Date</string>
+
+    <string name="patient_review_s">Patient Review\'s</string>
+    <string name="providername">providerName</string>
+    <string name="providerspecialization">providerSpecialization</string>
+    <string name="choose_time">Choose Time</string>
+
+
+    <string name="choose_location">SET MY LOCATION</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="name">Name:</string>
+    <string name="speciality">Speciality:</string>
+    <string name="providerlocation">ProviderLocation:</string>
+    <string name="patientlocation">PatientLocation:</string>
+    <string name="date">Date:</string>
+    <string name="time">Time:</string>
+    <string name="fromday">FromDay:</string>
+    <string name="enter_waiting_time_in_minutes">Enter waiting time you take to reach patient(in minutes)</string>
+    <string name="add_information">Add Information</string>
+    <string name="enter_name">Enter full Name</string>
+    <string name="enter_specialization_description">Enter Specialization description</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="enter_phone_number">Enter Phone Number</string>
+    <string name="gender">Gender:</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="select_birthdate">Select BirthDate</string>
+    <string name="select_location">Select Location:</string>
+    <string name="select_specialization">Select Specialization:</string>
+    <string name="fees">Fees</string>
+    <string name="select_available_daterange">Select Available DateRange:</string>
+    <string name="email">Email:</string>
+    <string name="phone_number">Phone Number:</string>
+    <string name="available_daterange">Available DateRange</string>
+    <string name="from_day">From Day:</string>
+    <string name="to_day">To Day:</string>
+    <string name="from_hour">From Hour:</string>
+    <string name="to_hour">To Hour:</string>
+    <string name="waiting_time">Waiting Time:</string>
+    <string name="edit">Edit</string>
+    <string name="save">Save</string>
+    <string name="provider">Provider</string>
+    <string name="feedback_about_provider">Feedback about provider</string>
+    <string name="rate">Rate</string>
+    <string name="thank_you_for_using_sanad">Thank you for using SANAD</string>
+    <string name="call_patient">CALL PATIENT</string>
+    <string name="arrived">ARRIVED</string>
+    <string name="end_visit">END VISIT</string>
+    <string name="continue_as_a_patient">CONTINUE AS A PATIENT</string>
+    <string name="become_a_provider">BECOME A PROVIDER</string>
+
+
+    <string name="available_from">Available From:</string>
+    <string name="comment">comment</string>
+    <string name="choose_by_speciality_and_area">CHOOSE PROVIDER BY SPECIALITY/AREA</string>
+    <string name="choose_by_care_provider_name">CHOOSE PROVIDER BY NAME</string>
+    <string name="my_profile">MY PROFILE</string>
+    <string name="RATE">MY RATE</string>
+    <string name="history">HISTORY</string>
+    <string name="language">LANGUAGE</string>
+    <string name="about">ABOUT</string>
+    <string name="sign_out">SIGN OUT</string>
+    <string name="double_tap">Double Tap</string>
+    <string name="patient_name">Patient Name:</string>
+    <string name="hide_bottom_view_on_scroll_behavior">HideBottomViewOnScrollBehavior</string>
 </resources>

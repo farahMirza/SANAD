@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".set_information">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context=".Information">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/user_image"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@color/grey"
+            android:maxHeight="300dp"
+            android:maxWidth="300dp"/>
+
+        <EditText
+            android:id="@+id/user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_name"
+            android:textColor="@color/orange"
+            android:textColorHint="@color/grey" />
+
+        <EditText
+            android:id="@+id/user_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_specialization_description"
+            android:textColor="@color/orange"
+            android:textColorHint="@color/grey" />
+
+
+        <EditText
+            android:id="@+id/phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_phone_number"
+            android:textColor="@color/orange"
+            android:textColorHint="@color/grey"
+            android:inputType="number"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gender"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/darkOrange" />
+
+            <RadioGroup
+                android:id="@+id/radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <RadioButton
+                    android:id="@+id/Male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/male"
+                    android:textColor="@color/darkgrey"
+                    android:textColorHighlight="@color/darkgrey" />
+
+                <RadioButton
+                    android:id="@+id/Female"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/female"
+                    android:textColor="@color/darkOrange"
+                    android:textColorHighlight="@color/darkOrange"
+                    android:textColorHint="@color/darkOrange" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/birth_Date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/grey"
+            android:gravity="center_horizontal"
+            android:text="@string/select_birthdate"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/select_location"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/darkOrange"
+                android:textColorHint="@color/darkOrange" />
+
+            <Spinner
+                android:id="@+id/location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/darkOrange"
+                android:textColorHint="@color/darkOrange" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/specialization_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/select_specialization"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/darkOrange"
+                android:textColorHint="@color/darkOrange" />
+
+            <Spinner
+                android:id="@+id/specialized"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColorHint="@color/darkOrange" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/fees"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/fees"
+            android:inputType="number"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColorHint="@color/grey" />
+
+        <TextView
+            android:id="@+id/DateRange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/select_available_daterange"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColorHint="@color/darkOrange" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/fromD"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:hint="@string/fromday"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColorHint="@color/darkOrange" />
+
+            <Button
+                android:id="@+id/from_day"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:text="choose day"
+                android:textColor="@color/white"
+                android:background="@color/grey"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/toD"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:hint="@string/to_day"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColorHint="@color/darkOrange" />
+
+            <Button
+                android:textColor="@color/white"
+                android:background="@color/grey"
+                android:id="@+id/today"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:text="choose day" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/fromH"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:hint="@string/from_hour"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColorHint="@color/darkOrange" />
+
+            <Button
+                android:textColor="@color/white"
+                android:id="@+id/from_hour"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:text="choose hour"
+                android:background="@color/grey"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/toH"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:text="@string/to_hour"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/darkOrange" />
+
+            <Button
+                android:textColor="@color/white"
+                android:id="@+id/to_hour"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:background="@color/grey"
+                android:text="choose hour" />
+
+        </LinearLayout>
+
+        <EditText
+            android:textColorHint="@color/grey"
+            android:id="@+id/waiting_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="@string/enter_waiting_time_in_minutes"
+            />
+
+        <Button
+            android:id="@+id/database_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/grey"
+            android:text="Add information"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</ScrollView>
