@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:text="MY RATE:"
+        android:id="@+id/rank_dialog_text1"
+        android:textStyle="bold"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Light.Widget.PopupMenu.Large"
+        android:textColor="@color/grey"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+
+    <RatingBar
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:id="@+id/dialog_ratingPro"
+        android:layout_gravity="center"
+        android:numStars="5"
+        android:stepSize="1.0"
+        android:rating="1"
+        android:isIndicator="true"
+        style="@style/MyRatingBar"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:text="PATIENTS:"
+            android:id="@+id/rank_dialog_text2"
+            android:textStyle="bold"
+            android:textColor="@color/grey"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"/>
+        <TextView
+            android:id="@+id/t3"
+            android:text=""
+            android:textColor="@color/orange"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"/>
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/rank_dialog_button"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        android:focusable="false"
+        android:layout_margin="5dip"
+        android:textColor="@color/orange"
+        android:layout_width="fill_parent"
+        />
+</LinearLayout>

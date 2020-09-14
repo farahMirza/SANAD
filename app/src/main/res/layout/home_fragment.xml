@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/provider_home_img"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:paddingTop="30dp"
+        android:src="@drawable/hand_logo"
+        android:visibility="gone"
+
+        />
+
+    <ImageView
+
+        android:id="@+id/patient_home_img"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingTop="30dp"
+        android:src="@drawable/hand_logo"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/patient_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="0.7"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+
+        >
+
+        <Button
+            android:id="@+id/choose_area_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="5dp"
+            android:background="@color/darkgrey"
+            android:drawableLeft="@drawable/doctor"
+            android:gravity="center"
+            android:onClick="choose_speciality"
+            android:text="@string/choose_by_speciality_and_area"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/choose_by_careProvider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/darkgrey"
+            android:drawableLeft="@drawable/doctor"
+            android:onClick="choose_proName"
+            android:text="@string/choose_by_care_provider_name"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/patRelative"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="0.1"
+        android:gravity="bottom"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/disable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/disabled_people" />
+
+        <ImageView
+            android:id="@+id/handicap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@id/disable"
+            android:src="@drawable/hearings" />
+
+        <ImageView
+            android:id="@+id/suger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/handicap"
+            android:src="@drawable/hospital" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/proAnim"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="left"
+            android:src="@drawable/doctor" />
+
+        <ImageView
+            android:id="@+id/female_doc"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@id/proAnim"
+            android:layout_centerInParent="true"
+            android:layout_gravity="left"
+            android:src="@drawable/doctor" />
+
+        <ImageView
+            android:id="@+id/scientest"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="left"
+            android:src="@drawable/scientist" />
+    </RelativeLayout>
+
+    <TableLayout
+        android:id="@+id/provider_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="top"
+        android:stretchColumns="1"
+        android:visibility="gone">
+
+
+        <TableRow android:gravity="center">
+
+            <Button
+                android:id="@+id/myAgenda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/darkgrey"
+                android:drawableLeft="@drawable/appointment"
+                android:text="TODAY'S AGENDA "
+                android:textColor="@color/white" />
+        </TableRow>
+
+
+    </TableLayout>
+
+</LinearLayout>

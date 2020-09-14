@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/home_menu"
+        android:title="HOME"
+        android:enabled="true"
+        android:icon="@drawable/home"
+        />
+    <item android:id="@+id/appointment_menu"
+        android:title="APPOINTMENT"
+        android:enabled="true"
+        android:icon="@drawable/appointment"
+        />
+
+    <item android:id="@+id/more_menu"
+            android:title="MORE"
+        android:enabled="true"
+            android:icon="@drawable/more"
+        />
+</menu>

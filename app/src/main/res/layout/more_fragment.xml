@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/my_profile"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#90A4AE"
+        android:drawableLeft="@drawable/doctor"
+        android:gravity="center_vertical"
+        android:text="@string/my_profile"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/white"
+
+        />
+
+    <TextView
+        android:id="@+id/myRate"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#607D8C"
+        android:drawableLeft="@drawable/doctor"
+        android:gravity="center_vertical"
+        android:onClick="agenda"
+        android:text="@string/RATE"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/white"
+        android:visibility="gone"
+
+        />
+
+    <TextView
+        android:id="@+id/history_btn"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#546E7A"
+        android:drawableLeft="@drawable/history"
+        android:gravity="center_vertical"
+        android:text="@string/history"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/white"
+
+        />
+
+
+
+
+    <TextView
+        android:id="@+id/about"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#37474F"
+        android:drawableLeft="@drawable/about"
+        android:gravity="center_vertical"
+        android:text="@string/about"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/white"
+
+        />
+
+
+    <TextView
+        android:id="@+id/signout_btn"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#263238"
+        android:drawableLeft="@drawable/exit"
+        android:gravity="center_vertical"
+        android:onClick="signout"
+        android:text="@string/sign_out"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/white"
+
+        />
+
+</LinearLayout>

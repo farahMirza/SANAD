@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    >
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/LList"
+        android:divider="@color/darkgrey"
+        android:dividerHeight="3dp"
+        android:focusable="true"
+        android:listSelector="@color/grey"/>
+
+
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/no_appointment"
+    android:layout_centerInParent="true"
+    android:id="@+id/no_appointment_icon"
+    android:visibility="gone"
+    />
+    <TextView
+        android:id="@+id/no_appointment_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/No_appointment"
+        android:layout_below="@id/no_appointment_icon"
+        android:layout_centerInParent="true"
+        android:textColor="@color/darkgrey"
+        android:visibility="gone"/>
+
+</RelativeLayout>
