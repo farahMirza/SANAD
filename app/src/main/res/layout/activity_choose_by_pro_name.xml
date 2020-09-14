@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChooseByProName"
+    android:orientation="vertical">
+
+
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/search_name"
+        android:iconifiedByDefault="false"
+        android:queryHint="Search for CareProvider name"/>
+    <ListView
+        android:id="@+id/by_name_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:listSelector="@color/grey"
+        android:divider="@color/darkOrange"
+        android:dividerHeight="1dp"
+        />
+
+
+
+</LinearLayout>
