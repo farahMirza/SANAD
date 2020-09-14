@@ -82,7 +82,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 Users u = dataSnapshot.getValue(Users.class);
-                if (u.getTYPE().equals("provider")) {
+                if (u.getTYPE().equals("doctor")) {
 
                     patientLayout.setVisibility(View.GONE);
                     providerLayout.setVisibility(View.VISIBLE);

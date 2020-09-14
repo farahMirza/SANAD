@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
                     finish();
                 } else {
                     // This is an existing user, show them a welcome back screen.
-                    Intent intent = new Intent(this, Home.class);
+                    Intent intent = new Intent(this, SignIn.class);
                     startActivity(intent);
                     finish();
                 }

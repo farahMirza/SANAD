@@ -1,8 +1,8 @@
-package com.sanad.farah.sanad;
+package com.example.sanad;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -17,6 +17,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class ChooseByProName extends AppCompatActivity implements AdapterView.OnItemClickListener {
     private FirebaseDatabase mFirebaseDatabase;
@@ -43,13 +45,13 @@ public class ChooseByProName extends AppCompatActivity implements AdapterView.On
                 userList.clear();
                 for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
                     Users user = postSnapshot.getValue(Users.class);
-                    if (user.getTYPE().equals("provider")) {
+                    if (user.getTYPE().equals("doctor")) {
                         userList.add(user);
                     }
 
                 }
                 if (userList.isEmpty()) {
-                    Toast.makeText(ChooseByProName.this, "provider not found", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ChooseByProName.this, "doctor not found", Toast.LENGTH_SHORT).show();
                 }
                  adapter = new CareProviderAdapter(ChooseByProName.this, userList);
                 lst.setAdapter(adapter);
@@ -63,7 +65,7 @@ public class ChooseByProName extends AppCompatActivity implements AdapterView.On
 
                     @Override
                     public boolean onQueryTextChange(String newText) {
-                        //search for a provider name
+                        //search for a doctor name
 
                         tempArrayList = new ArrayList<Users>();
                         for (Users c : userList) {

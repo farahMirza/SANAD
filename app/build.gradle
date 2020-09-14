@@ -5,11 +5,17 @@ android {
     compileSdkVersion 29
 
     defaultConfig {
+        manifestPlaceholders = [
+                onesignal_app_id               : 'f0d1c236-2c10-40c5-8990-28a903e05a0b',
+                // Project number pulled from dashboard, local value is ignored.
+                onesignal_google_project_number: 'REMOTE'
+        ]
         applicationId "com.example.sanad"
         minSdkVersion 16
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -48,7 +54,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-inappmessaging-display:19.1.1'
     implementation 'com.android.support:support-annotations:28.0.0'
     implementation 'de.hdodenhof:circleimageview:2.2.0'
-    implementation 'com.github.jitpack:gradle-simple:1.0'
+
+
 
 
 

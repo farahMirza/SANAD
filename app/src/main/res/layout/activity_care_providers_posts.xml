@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CareProvidersPosts"
-    android:background="@drawable/wbg"
+    tools:context="com.example.sanad.CareProvidersPosts"
+    android:background="@color/white"
     android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"

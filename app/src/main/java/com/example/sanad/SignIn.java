@@ -56,7 +56,7 @@ public class SignIn extends AppCompatActivity implements BottomNavigationView.On
     }
 
     @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         fragment = null;
         switch (menuItem.getItemId()) {
             case R.id.home_menu:
@@ -108,4 +108,3 @@ public class SignIn extends AppCompatActivity implements BottomNavigationView.On
     }
 }
 
-}

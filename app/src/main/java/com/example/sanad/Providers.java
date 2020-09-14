@@ -1,13 +1,14 @@
-package com.sanad.farah.sanad;
+package com.example.sanad;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Providers extends AppCompatActivity {
     private ListView list;
@@ -21,12 +22,12 @@ public class Providers extends AppCompatActivity {
         mArrayList = new ArrayList<>();
 //        mArrayList.add(new ProviderItem(R.drawable.doctor2, "General Checking"));
 //        mArrayList.add(new ProviderItem(R.drawable.nurse2, "Nurse"));
-        mArrayList.add(new ProviderItem(R.drawable.ribbon, "PALLIATIVE CARE"));
-        mArrayList.add(new ProviderItem(R.drawable.psychologist, "PSYCHOTHERAPIST"));
-        mArrayList.add(new ProviderItem(R.drawable.disabled, "MULTIPLE SCLEROSIS CARE"));
-        mArrayList.add(new ProviderItem(R.drawable.abc_block, "AUTISM CARE"));
-        mArrayList.add(new ProviderItem(R.drawable.ear, "SPEECH THERAPY"));
-        mArrayList.add(new ProviderItem(R.drawable.autism, "HEARING THERAPY"));
+        mArrayList.add(new ProviderItem(R.drawable.hearings, "PALLIATIVE CARE"));
+        mArrayList.add(new ProviderItem(R.drawable.hearings, "PSYCHOTHERAPIST"));
+        mArrayList.add(new ProviderItem(R.drawable.disabled_people, "MULTIPLE SCLEROSIS CARE"));
+        mArrayList.add(new ProviderItem(R.drawable.hearings, "AUTISM CARE"));
+        mArrayList.add(new ProviderItem(R.drawable.hearings, "SPEECH THERAPY"));
+        mArrayList.add(new ProviderItem(R.drawable.hearings, "HEARING THERAPY"));
 
 
         ProvidersAdapter adapter = new ProvidersAdapter(this, mArrayList);

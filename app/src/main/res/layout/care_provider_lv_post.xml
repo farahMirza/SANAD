@@ -14,7 +14,7 @@
             android:layout_height="0dp"
             android:layout_weight="2"
            android:layout_gravity="center"
-            android:src="@mipmap/profiles"/>
+            android:src="@drawable/doctor"/>
 
         <TextView
             android:id="@+id/provider_name"
@@ -48,124 +48,6 @@
             android:rating="1"
             android:stepSize="0.1"
             />
-
-
-    <!--<LinearLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="0dp"-->
-        <!--android:layout_weight="0.75">-->
-
-        <!--<ImageView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:src="@drawable/description" />-->
-
-        <!--<TextView-->
-            <!--android:id="@+id/description"-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_weight="0.8"-->
-            <!--android:textColor="@color/darkgrey" />-->
-    <!--</LinearLayout>-->
-
-    <!--<LinearLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="0dp"-->
-        <!--android:layout_weight="0.75">-->
-
-        <!--<ImageView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:src="@drawable/fee" />-->
-
-        <!--<TextView-->
-            <!--android:id="@+id/cash"-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_weight="0.8"-->
-            <!--android:textColor="@color/darkgrey" />-->
-    <!--</LinearLayout>-->
-
-    <!--<LinearLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="0dp"-->
-        <!--android:layout_weight="0.75">-->
-
-        <!--<ImageView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:src="@drawable/clock" />-->
-
-        <!--<TextView-->
-            <!--android:id="@+id/waiting_time"-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_weight="0.8"-->
-            <!--android:textColor="@color/darkgrey" />-->
-    <!--</LinearLayout>-->
-
-    <!--<LinearLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="0dp"-->
-        <!--android:layout_weight="0.75">-->
-
-        <!--<ImageView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:src="@drawable/location" />-->
-
-        <!--<TextView-->
-            <!--android:id="@+id/locaion_address"-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_weight="0.8"-->
-            <!--android:textColor="@color/darkgrey" />-->
-    <!--</LinearLayout>-->
-
-    <!--<LinearLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="0dp"-->
-        <!--android:layout_weight="0.75">-->
-
-        <!--<ImageView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:src="@drawable/phone" />-->
-
-        <!--<TextView-->
-            <!--android:id="@+id/phone_number"-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_weight="0.8"-->
-            <!--android:textColor="@color/darkgrey" />-->
-    <!--</LinearLayout>-->
-
-    <!--<LinearLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="0dp"-->
-        <!--android:layout_weight="2"-->
-        <!--android:orientation="horizontal"-->
-        <!--&gt;-->
-
-        <!--<TextView-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_weight="0.25"-->
-            <!--android:fontFamily="sans-serif-condensed"-->
-            <!--android:text="@string/available_from"-->
-            <!--android:textStyle="bold"-->
-            <!--android:textColor="@color/darkOrange"-->
-
-            <!--/>-->
-
-        <!--<TextView-->
-            <!--android:id="@+id/availability"-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_weight="0.75"-->
-            <!--android:fontFamily="sans-serif-condensed"-->
-            <!--android:textColor="@color/darkgrey" />-->
-    <!--</LinearLayout>-->
 
 
 </LinearLayout>

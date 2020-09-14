@@ -78,7 +78,7 @@ public class AppointmentsFragment extends Fragment {
                 for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
                     Appointments point = postSnapshot.getValue(Appointments.class);
                     if (point != null)
-                        //to check that the appoint belongs to patient or provider
+                        //to check that the appoint belongs to patient or doctor
                         if (point.getPatientID().equals(user.getUid()) || point.getProviderID().equals(user.getUid()))
                             appointList.add(point);
                 }

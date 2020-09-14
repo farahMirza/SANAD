@@ -1,29 +1,15 @@
-package com.sanad.farah.sanad;
+package com.example.sanad;
 
-import android.Manifest;
-import android.app.Activity;
-import android.app.AlarmManager;
-import android.app.AlertDialog;
-import android.app.PendingIntent;
-import android.content.ContentResolver;
-import android.content.ContentValues;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.AsyncTask;
-import android.os.Build;
+import android.os.Bundle;
 import android.os.StrictMode;
 import android.preference.PreferenceManager;
-import android.provider.CalendarContract;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.util.Log;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -38,23 +24,18 @@ import com.google.android.gms.location.places.ui.PlacePicker;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.ChildEventListener;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-
 
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
-
-import java.util.Calendar;
 import java.util.Scanner;
 
-public class  ConformationActivity extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class ConformationActivity extends AppCompatActivity {
     private static final String TAG = "Conformation Activity";
     private ListView lst;
     private TextView name, location, specialization, number, time, pName;
@@ -129,7 +110,7 @@ public class  ConformationActivity extends AppCompatActivity {
                     intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                     sendNotification();
                     startActivity(intent);
-                    Toast.makeText(ConformationActivity.this, "wait for provider response", Toast.LENGTH_LONG).show();
+                    Toast.makeText(ConformationActivity.this, "wait for doctor response", Toast.LENGTH_LONG).show();
 
 
                 }

@@ -1,19 +1,15 @@
-package com.sanad.farah.sanad;
+package com.example.sanad;
 
 import android.app.Activity;
-import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.support.annotation.DrawableRes;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.Filter;
-import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -32,7 +28,6 @@ import com.google.firebase.storage.StorageReference;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 
 public class CareProviderAdapter extends ArrayAdapter<Users> {
     private float rate;
@@ -64,7 +59,7 @@ public class CareProviderAdapter extends ArrayAdapter<Users> {
         storage = FirebaseStorage.getInstance();
         StorageReference storageRef = storage.getReferenceFromUrl("gs://sanad-7d768.appspot.com/images").child(currentCareProviderItem.getID());
         iconView = (ImageView) listItemView.findViewById(R.id.user_image);
-        iconView.setImageResource(R.drawable.user);
+        iconView.setImageResource(R.drawable.doctor);
 
         try {
             final File localFile = File.createTempFile("images", "jpg");
@@ -81,15 +76,13 @@ public class CareProviderAdapter extends ArrayAdapter<Users> {
                 }
             });
         } catch (IOException e) {
-            iconView.setImageResource(R.drawable.user);
+            iconView.setImageResource(R.drawable.doctor);
         }
 
 
         TextView providerTextView = (TextView) listItemView.findViewById(R.id.provider_name);
         providerTextView.setText(currentCareProviderItem.getNAME());
 
-//        TextView specialization = (TextView) listItemView.findViewById(R.id.provider_specializtion);
-//        specialization.setText(currentCareProviderItem.getSpecialization());
 
         TextView discription = (TextView) listItemView.findViewById(R.id.description);
         discription.setText(currentCareProviderItem.getDescription());
@@ -117,20 +110,7 @@ public class CareProviderAdapter extends ArrayAdapter<Users> {
         });
 
 
-//        TextView location = (TextView) listItemView.findViewById(R.id.locaion_address);
-//        location.setText(currentCareProviderItem.getADDRESS());
-//
-//        TextView cash = (TextView) listItemView.findViewById(R.id.cash);
-//        cash.setText(currentCareProviderItem.getFees() + "JD");
-//        TextView number = (TextView) listItemView.findViewById(R.id.phone_number);
-//        number.setText(currentCareProviderItem.getMOBILE());
-//
-//        TextView waiting = (TextView) listItemView.findViewById(R.id.waiting_time);
-//        waiting.setText(currentCareProviderItem.getWaiting_time() + "Minutes");
-//
-//        TextView availability = (TextView) listItemView.findViewById(R.id.availability);
-//        String msg = currentCareProviderItem.getFromday() + "-" + currentCareProviderItem.getToDay() + "\n From Hour: " + currentCareProviderItem.getFromHour() + "-" + currentCareProviderItem.getToHour();
-//        availability.setText(msg);
+
         return listItemView;
     }
 

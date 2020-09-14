@@ -237,7 +237,7 @@ public class MyProfile extends AppCompatActivity {
                     ToDView.setVisibility(View.GONE);
                     availableRang.setVisibility(View.GONE);
 
-                } else if (u.getTYPE().equals("provider")) {
+                } else if (u.getTYPE().equals("doctor")) {
                     name.setText(u.getNAME());
                     if (!user.getEmail().equals("")) {
                         emailLayout.setVisibility(View.VISIBLE);

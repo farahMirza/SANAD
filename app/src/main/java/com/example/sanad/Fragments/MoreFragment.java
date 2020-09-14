@@ -83,7 +83,7 @@ public class MoreFragment extends Fragment {
          @Override
          public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
              Users u = dataSnapshot.getValue(Users.class);
-             if(u.getTYPE().equals("provider")){
+             if(u.getTYPE().equals("doctor")){
                  rankDialog = new Dialog(getContext(), R.style.FullHeightDialog);
 
                  myRate.setVisibility(View.VISIBLE);

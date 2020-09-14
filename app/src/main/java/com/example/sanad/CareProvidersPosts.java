@@ -1,28 +1,27 @@
-package com.sanad.farah.sanad;
+package com.example.sanad;
 
 import android.content.Intent;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import com.firebase.ui.auth.data.model.User;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import java.util.ArrayList;
-import java.util.List;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class CareProvidersPosts extends AppCompatActivity implements OnItemClickListener {
     private ListView lst;
@@ -55,7 +54,7 @@ public class CareProvidersPosts extends AppCompatActivity implements OnItemClick
                 userList.clear();
                 for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
                     Users user = postSnapshot.getValue(Users.class);
-                    if (user.getTYPE().equals("provider")) {
+                    if (user.getTYPE().equals("doctor")) {
                         if (user.getSpecialization().equals(getIntent().getStringExtra("providerType")) && user.getADDRESS().equals(getIntent().getStringExtra("providerLocation")))
                             userList.add(user);
                     }
@@ -63,7 +62,7 @@ public class CareProvidersPosts extends AppCompatActivity implements OnItemClick
                 }
 
                 if (userList.isEmpty()) {
-                    Toast.makeText(CareProvidersPosts.this, "provider not found", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(CareProvidersPosts.this, "doctor not found", Toast.LENGTH_SHORT).show();
                 }
                 CareProviderAdapter adapter = new CareProviderAdapter(CareProvidersPosts.this, userList);
                 lst.setAdapter(adapter);
@@ -108,7 +107,7 @@ public class CareProvidersPosts extends AppCompatActivity implements OnItemClick
                             userList.clear();
                             for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
                                 Users user = postSnapshot.getValue(Users.class);
-                                if (user.getTYPE().equals("provider")) {
+                                if (user.getTYPE().equals("doctor")) {
                                     if (user.getSpecialization().equals(getIntent().getStringExtra("providerType")) && user.getADDRESS().equals(getIntent().getStringExtra("providerLocation")) && user.getGENDER().equals("Female"))
                                         userList.add(user);
                                 }
@@ -135,7 +134,7 @@ public class CareProvidersPosts extends AppCompatActivity implements OnItemClick
                             userList.clear();
                             for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
                                 Users user = postSnapshot.getValue(Users.class);
-                                if (user.getTYPE().equals("provider")) {
+                                if (user.getTYPE().equals("doctor")) {
                                     if (user.getSpecialization().equals(getIntent().getStringExtra("providerType")) && user.getADDRESS().equals(getIntent().getStringExtra("providerLocation")) && user.getGENDER().equals("Male"))
                                         userList.add(user);
                                 }

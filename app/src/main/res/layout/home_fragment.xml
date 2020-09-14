@@ -129,7 +129,7 @@
             android:layout_height="50dp"
             android:layout_alignParentRight="true"
             android:layout_gravity="left"
-            android:src="@drawable/scientist" />
+            android:src="@drawable/doctor" />
     </RelativeLayout>
 
     <TableLayout

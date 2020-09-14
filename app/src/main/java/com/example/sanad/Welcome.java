@@ -41,12 +41,12 @@ public class Welcome extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Welcome.this, set_information.class);
-                intent.putExtra("TYPE", "provider");
+                intent.putExtra("TYPE", "doctor");
                 SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(Welcome.this);
                 SharedPreferences.Editor editor = prefs.edit();
-                editor.putString("TYPE", "provider");
+                editor.putString("TYPE", "doctor");
                 editor.commit();
-                type = "provider";
+                type = "doctor";
                 startActivity(intent);
                 finish();
 
@@ -70,12 +70,12 @@ public class Welcome extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Welcome.this, set_information.class);
-                intent.putExtra("TYPE", "provider");
+                intent.putExtra("TYPE", "doctor");
                 SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(Welcome.this);
                 SharedPreferences.Editor editor = prefs.edit();
-                editor.putString("TYPE", "provider");
+                editor.putString("TYPE", "doctor");
                 editor.apply();
-                type = "provider";
+                type = "doctor";
                 startActivity(intent);
                 finish();
 

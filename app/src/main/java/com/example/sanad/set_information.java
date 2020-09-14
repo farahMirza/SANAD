@@ -112,25 +112,18 @@ public class set_information extends AppCompatActivity {
                 chooseImage();
             }
         });
-        mFirebaseDatabase = FirebaseDatabase.getInstance();
-        myRef = mFirebaseDatabase.getReference("Specialization");
+        
+        specializationArray=new ArrayList<String>();
+        specializationArray.add("PALLIATIVE CARE");
+        specializationArray.add("PSYCHOTHERAPIST");
+        specializationArray.add("MULTIPLE SCLEROSIS CARE");
+        specializationArray.add("AUTISM CARE");
+        specializationArray.add("SPEECH THERAPY");
+        specializationArray.add("HEARING THERAPY");
+        adapter = new ArrayAdapter<String>(set_information.this, android.R.layout.simple_spinner_item, specializationArray);
+        adapter.setDropDownViewResource(android.R.layout.simple_list_item_1);
+        specialization.setAdapter(adapter);
 
-        myRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-
-                specializationArray = (ArrayList<String>) dataSnapshot.getValue();
-                adapter = new ArrayAdapter<String>(set_information.this, android.R.layout.simple_spinner_item, specializationArray);
-                adapter.setDropDownViewResource(android.R.layout.simple_list_item_1);
-                specialization.setAdapter(adapter);
-            }
-
-            @Override
-            public void onCancelled(DatabaseError error) {
-                // Failed to read value
-                Log.w("places", "Failed to read value.", error.toException());
-            }
-        });
         specialization.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -248,7 +241,7 @@ public class set_information extends AppCompatActivity {
                         startActivity(in);
                         Toast.makeText(set_information.this, INFORMATION_HAVE_BEEN_ADDED, Toast.LENGTH_LONG).show();
                     }
-                } else if (getIntent().getStringExtra("TYPE").equals("provider")) {
+                } else if (getIntent().getStringExtra("TYPE").equals("doctor")) {
                     if ( user_name.getText().equals(ENTER_NAME) || phone_number.getText().equals(ENTER_PHONE_NUMBER) || BDate.getText().equals(SELECT_BIRTH_DATE) || fromHour.getText().equals("choose hour") || fromDay.equals("choose day") || toHour.equals("choose hour") || toDay.equals("choose day") ||
                             fees.getText().equals("Fees") || waiting.getText().equals("Enter waiting time in minutes"))
                     {
@@ -258,7 +251,7 @@ public class set_information extends AppCompatActivity {
                         ref = FirebaseDatabase.getInstance().getReference("Users");
                         ref.child(user.getUid()).setValue(u);
                         Intent in = new Intent(set_information.this, SignIn.class);
-                        in.putExtra("TYPE", "provider");
+                        in.putExtra("TYPE", "doctor");
                         uploadImage();
                         startActivity(in);
                         Toast.makeText(set_information.this, INFORMATION_HAVE_BEEN_ADDED, Toast.LENGTH_LONG).show();

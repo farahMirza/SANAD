@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="">
+    tools:context="com.example.sanad.Agenda">
 
 
-        <com.framgia.library.calendardayview.CalendarDayView
-            android:id="@+id/dayView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:dayHeight="@dimen/dayHeight"/>
+<!--        <com.framgia.library.calendardayview.CalendarDayView-->
+<!--            android:id="@+id/dayView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:dayHeight="@dimen/dayHeight"/>-->
     </ScrollView>
 

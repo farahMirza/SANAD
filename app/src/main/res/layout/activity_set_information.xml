@@ -175,7 +175,7 @@
                 android:layout_weight="0.75"
                 android:text="choose day"
                 android:textColor="@color/white"
-                android:background="@color/grey"/>
+                android:background="@drawable/teal_button"/>
         </LinearLayout>
 
         <LinearLayout
@@ -221,7 +221,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.75"
                 android:text="choose hour"
-                android:background="@color/grey"/>
+                android:background="@drawable/teal_button"/>
         </LinearLayout>
 
         <LinearLayout

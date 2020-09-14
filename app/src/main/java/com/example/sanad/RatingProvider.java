@@ -64,7 +64,7 @@ public class RatingProvider extends AppCompatActivity {
         ProvName = prefs.getString("provName", "");
         ProvID = prefs.getString("provID", "");
         ProvFees = prefs.getString("Fees", "");
-        //provider picture
+        //doctor picture
         storage = FirebaseStorage.getInstance();
         storageRef = storage.getReferenceFromUrl("gs://sanad-7d768.appspot.com/images").child(ProvID);
         try {

@@ -1,8 +1,8 @@
-package com.sanad.farah.sanad;
+package com.example.sanad;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -18,6 +18,8 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class ProviderPlace extends AppCompatActivity {
     private ListView lst;
@@ -77,7 +79,7 @@ public class ProviderPlace extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                //search for a provider area
+                //search for a doctor area
                 if (adapter != null)
                     adapter.getFilter().filter(newText);
                 return false;

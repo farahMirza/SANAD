@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProviderPlace"
+    tools:context="com.example.sanad.ProviderPlace"
     android:orientation="vertical">
 <SearchView
     android:layout_width="match_parent"

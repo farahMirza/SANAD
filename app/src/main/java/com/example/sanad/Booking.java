@@ -1,4 +1,4 @@
-package com.sanad.farah.sanad;
+package com.example.sanad;
 
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
@@ -8,16 +8,14 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.preference.PreferenceManager;
-import android.provider.ContactsContract;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+
+
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -40,14 +38,9 @@ import com.google.firebase.storage.StorageReference;
 import java.io.File;
 import java.io.IOException;
 import java.util.Calendar;
-
-import android.app.TimePickerDialog;
-import android.app.Fragment;
-import android.app.DialogFragment;
-
-import java.util.Calendar;
-
-import android.widget.TimePicker;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Booking extends AppCompatActivity {
     public static final String CHOOSE_DATE_AND_TIME = "choose Date and time";
@@ -299,13 +292,7 @@ public class Booking extends AppCompatActivity {
         SharedPreferences.Editor editor = prefs.edit();
         editor.putString("proID", getIntent().getStringExtra("prov_id"));
         editor.apply();
-//        preview.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(Booking.this, FeedBackActivity.class);
-//                startActivity(intent);
-//            }
-//        });
+
     }
 
 }
