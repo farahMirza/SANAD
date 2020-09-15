@@ -12,7 +12,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.FirebaseUserMetadata;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
+import com.onesignal.OneSignal;
 import java.util.Arrays;
 import java.util.List;
 
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
                 .setNotificationOpenedHandler(new ExampleNotificationOpenedHandler(getApplication()))
                 .setNotificationReceivedHandler(new ExampleNotificationReceivedHandler(getApplication()))
                 .unsubscribeWhenNotificationsAreDisabled(true)
-                .init(); 
+                .init();
     }
 
     // Check if user is signed in (non-null) and update UI accordingly.
