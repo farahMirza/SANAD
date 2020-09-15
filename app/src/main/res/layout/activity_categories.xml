@@ -14,7 +14,7 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:background="@color/white"
-        android:drawableLeft="@drawable/doctor"
+        android:drawableLeft="@drawable/pro"
         android:gravity="center_vertical"
         android:text="GENERAL CHECKING"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -24,11 +24,12 @@
 
 
     <Button
-        android:onClick="check"
+
         android:id="@+id/nurse_services"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:drawableLeft="@drawable/nurse"
         android:background="@color/white"
         android:gravity="center_vertical"
         android:text="NURSING SERVICES"
@@ -45,6 +46,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:drawableLeft="@drawable/physiotherapy"
         android:background="@color/white"
         android:gravity="center_vertical"
         android:text="PHYSICAL THERAPY"

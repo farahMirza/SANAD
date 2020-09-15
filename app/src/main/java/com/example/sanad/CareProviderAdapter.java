@@ -57,7 +57,7 @@ public class CareProviderAdapter extends ArrayAdapter<Users> {
 //putting images of care providers to the list
         Users currentCareProviderItem = getItem(position);
         storage = FirebaseStorage.getInstance();
-        StorageReference storageRef = storage.getReferenceFromUrl("gs://sanad-7d768.appspot.com/images").child(currentCareProviderItem.getID());
+        StorageReference storageRef = storage.getReferenceFromUrl("gs://sanad-7f6ef.appspot.com").child(currentCareProviderItem.getID());
         iconView = (ImageView) listItemView.findViewById(R.id.user_image);
         iconView.setImageResource(R.drawable.doctor);
 

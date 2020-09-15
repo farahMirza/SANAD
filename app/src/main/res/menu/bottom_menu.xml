@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/home_menu"
-        android:title="HOME"
+    <item
+        android:id="@+id/home_menu"
         android:enabled="true"
         android:icon="@drawable/home"
-        />
-    <item android:id="@+id/appointment_menu"
-        android:title="APPOINTMENT"
+        android:title="HOME" />
+    <item
+        android:id="@+id/appointment_menu"
         android:enabled="true"
         android:icon="@drawable/appointment"
-        />
+        android:title="APPOINTMENT" />
 
-    <item android:id="@+id/more_menu"
-            android:title="MORE"
+    <item
+        android:id="@+id/more_menu"
         android:enabled="true"
-            android:icon="@drawable/more"
-        />
+        android:icon="@drawable/more"
+        android:title="MORE" />
 </menu>

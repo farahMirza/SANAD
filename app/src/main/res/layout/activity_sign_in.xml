@@ -19,7 +19,7 @@
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:itemIconTint="#FF9100"
+        app:itemIconTint="@color/orange"
         app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
         android:id="@+id/bottom_nav"
         />

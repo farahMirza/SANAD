@@ -23,7 +23,7 @@
         android:fontFamily="sans-serif-condensed"
         android:gravity="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="@color/orange" />
+        android:textColor="@color/grey" />
 
 
 </LinearLayout>

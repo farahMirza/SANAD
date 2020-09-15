@@ -1,5 +1,6 @@
 package com.example.sanad;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -8,7 +9,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Categories extends AppCompatActivity {
+public class Categories extends AppCompatActivity implements View.OnClickListener {
     Button generalCheck;
     Button nursing ;
     Button therapy ;
@@ -19,7 +20,7 @@ public class Categories extends AppCompatActivity {
         generalCheck=(Button)findViewById(R.id.gen_check);
         nursing=(Button)findViewById(R.id.nurse_services);
         therapy=(Button)findViewById(R.id.phys_thrapy);
-
+nursing.setOnClickListener(this);
 
 
 
@@ -36,15 +37,18 @@ public class Categories extends AppCompatActivity {
         intent.putExtra("ProviderType", generalCheck.getText());
         startActivity(intent);
     }
-    public void check(View v){
-        Intent intent = new Intent(getApplicationContext(), Providers.class);
-       intent.putExtra("ProviderType", nursing.getText());
-        startActivity(intent);
 
-    }  public void physc(View v){
+    public void physc(View v){
         Intent intent = new Intent(getApplicationContext(), ProviderPlace.class);
         intent.putExtra("ProviderType", therapy.getText());
         startActivity(intent);
 
+    }
+
+    @Override
+    public void onClick(View view) {
+        Intent intent = new Intent(getApplicationContext(), Providers.class);
+        intent.putExtra("ProviderType", nursing.getText());
+        startActivity(intent);
     }
 }

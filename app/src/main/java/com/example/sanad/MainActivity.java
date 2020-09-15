@@ -17,6 +17,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import com.firebase.ui.auth.AuthUI;
+import com.onesignal.OneSignal;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -46,6 +47,13 @@ public class MainActivity extends AppCompatActivity {
         mFirebaseDatabase = FirebaseDatabase.getInstance();
         mDatabaseReference = mFirebaseDatabase.getReference("Users");
         mAuth = FirebaseAuth.getInstance();
+        //one signal code
+        OneSignal.startInit(this)
+                .inFocusDisplaying(OneSignal.OSInFocusDisplayOption.Notification)
+                .setNotificationOpenedHandler(new ExampleNotificationOpenedHandler(getApplication()))
+                .setNotificationReceivedHandler(new ExampleNotificationReceivedHandler(getApplication()))
+                .unsubscribeWhenNotificationsAreDisabled(true)
+                .init(); 
     }
 
     // Check if user is signed in (non-null) and update UI accordingly.
@@ -58,13 +66,15 @@ public class MainActivity extends AppCompatActivity {
              metadata = mAuth.getCurrentUser().getMetadata();
             if (metadata.getCreationTimestamp() == metadata.getLastSignInTimestamp()) {
                 // The user is new, show them a fancy intro screen!
-                Intent intent = new Intent(this, SignIn.class);
+                Intent intent = new Intent(this, Welcome.class);
                 startActivity(intent);
+                Toast.makeText(this, "1", Toast.LENGTH_SHORT).show();
                 finish();
             } else {
                 // This is an existing user, show them a welcome back screen.
-                Intent intent = new Intent(this, Welcome.class);
+                Intent intent = new Intent(this, SignIn.class);
                 startActivity(intent);
+                Toast.makeText(this, "2", Toast.LENGTH_SHORT).show();
                 finish();
             }
 
@@ -99,12 +109,15 @@ public class MainActivity extends AppCompatActivity {
                 if (metadata.getCreationTimestamp() == metadata.getLastSignInTimestamp()) {
                     // The user is new, show them a fancy intro screen!
                     Intent intent = new Intent(this, Welcome.class);
+
                     startActivity(intent);
+                    Toast.makeText(this, "3", Toast.LENGTH_SHORT).show();
                     finish();
                 } else {
                     // This is an existing user, show them a welcome back screen.
                     Intent intent = new Intent(this, SignIn.class);
                     startActivity(intent);
+                    Toast.makeText(this, "4", Toast.LENGTH_SHORT).show();
                     finish();
                 }
 

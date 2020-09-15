@@ -107,9 +107,9 @@ public class Booking extends AppCompatActivity {
                 user = dataSnapshot.getValue(Users.class);
                 //profile pic
                 storage = FirebaseStorage.getInstance();
-                storageRef = storage.getReferenceFromUrl("gs://sanad-7d768.appspot.com/images").child(user.getID());
+                storageRef = storage.getReferenceFromUrl("gs://sanad-7f6ef.appspot.com").child(user.getID());
                 try {
-                    final File localFile = File.createTempFile("images", "jpg");
+                    final File localFile = File.createTempFile("images", "jpeg");
                     storageRef.getFile(localFile).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
                         @Override
                         public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {

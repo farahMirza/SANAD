@@ -22,12 +22,12 @@ public class Providers extends AppCompatActivity {
         mArrayList = new ArrayList<>();
 //        mArrayList.add(new ProviderItem(R.drawable.doctor2, "General Checking"));
 //        mArrayList.add(new ProviderItem(R.drawable.nurse2, "Nurse"));
-        mArrayList.add(new ProviderItem(R.drawable.hearings, "PALLIATIVE CARE"));
-        mArrayList.add(new ProviderItem(R.drawable.hearings, "PSYCHOTHERAPIST"));
-        mArrayList.add(new ProviderItem(R.drawable.disabled_people, "MULTIPLE SCLEROSIS CARE"));
-        mArrayList.add(new ProviderItem(R.drawable.hearings, "AUTISM CARE"));
-        mArrayList.add(new ProviderItem(R.drawable.hearings, "SPEECH THERAPY"));
-        mArrayList.add(new ProviderItem(R.drawable.hearings, "HEARING THERAPY"));
+        mArrayList.add(new ProviderItem(R.drawable.cancer, "PALLIATIVE CARE"));
+        mArrayList.add(new ProviderItem(R.drawable.mental_health, "PSYCHOTHERAPIST"));
+        mArrayList.add(new ProviderItem(R.drawable.mental_illness, "MULTIPLE SCLEROSIS CARE"));
+        mArrayList.add(new ProviderItem(R.drawable.brain, "AUTISM CARE"));
+        mArrayList.add(new ProviderItem(R.drawable.message, "SPEECH THERAPY"));
+        mArrayList.add(new ProviderItem(R.drawable.ear, "HEARING THERAPY"));
 
 
         ProvidersAdapter adapter = new ProvidersAdapter(this, mArrayList);

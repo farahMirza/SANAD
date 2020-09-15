@@ -12,7 +12,7 @@
         android:layout_height="0dp"
         android:layout_weight="2 "
         android:layout_gravity="center"
-        android:src="@drawable/doctor"
+        android:src="@drawable/pro"
         android:maxWidth="50dp"
         android:maxHeight="50dp"/>
 
@@ -25,7 +25,7 @@
         android:fontFamily="sans-serif"
         android:text="@string/providername"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="@color/darkOrange"
+        android:textColor="@color/orange"
         android:textStyle="bold" />
 
     <TextView
@@ -150,7 +150,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.30"
             android:text="Available From:"
-            android:textColor="@color/darkOrange"
+            android:textColor="@color/orange"
             android:textStyle="bold" />
 
         <TextView
@@ -182,18 +182,11 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@color/darkOrange"
+            android:background="@color/orange"
             android:text="@string/choose_time"
             android:textColor="@color/white" />
     </LinearLayout>
 
-    <!--<Button-->
-        <!--android:id="@+id/preview"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:background="@drawable/orange_button"-->
-        <!--android:text="@string/patient_review_s"-->
-        <!--android:textColor="@color/white" />-->
 
     <Button
         android:id="@+id/booking"

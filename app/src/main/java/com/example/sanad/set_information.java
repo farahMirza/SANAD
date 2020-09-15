@@ -114,7 +114,9 @@ public class set_information extends AppCompatActivity {
         });
         
         specializationArray=new ArrayList<String>();
+        specializationArray.add("GENERAL CHECKING");
         specializationArray.add("PALLIATIVE CARE");
+        specializationArray.add("PHYSICAL THERAPY");
         specializationArray.add("PSYCHOTHERAPIST");
         specializationArray.add("MULTIPLE SCLEROSIS CARE");
         specializationArray.add("AUTISM CARE");
