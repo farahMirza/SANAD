@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.sanad.set_information">
+    tools:context=".set_information">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -89,7 +89,7 @@
             android:id="@+id/birth_Date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/grey"
+            android:background="@drawable/teal_button"
             android:gravity="center_horizontal"
             android:text="@string/select_birthdate"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
@@ -193,7 +193,7 @@
 
             <Button
                 android:textColor="@color/white"
-                android:background="@color/grey"
+                android:background="@drawable/orange_button"
                 android:id="@+id/today"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -243,7 +243,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.75"
-                android:background="@color/grey"
+                android:background="@drawable/teal_button"
                 android:text="choose hour" />
 
         </LinearLayout>
@@ -262,7 +262,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:background="@color/grey"
+            android:background="@drawable/orange_button"
             android:text="Add information"
             android:textColor="@color/white" />
     </LinearLayout>

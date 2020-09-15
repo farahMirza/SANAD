@@ -1,28 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/white"
     android:orientation="vertical"
-    tools:context=".ConformationActivity">
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="3"
-        android:src="@drawable/doctor"/>
-
-
-
+    tools:context=".EditAppointment">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal">
-
         <TextView
-            android:id="@+id/providerName"
+            android:id="@+id/AproviderName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/name"
@@ -30,20 +20,19 @@
             android:textColor="@color/darkgrey" />
 
         <TextView
-            android:id="@+id/PN"
+            android:id="@+id/proName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/darkOrange" />
-    </LinearLayout>
 
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal">
-
         <TextView
-            android:id="@+id/providerSpec"
+            android:id="@+id/AproviderSpec"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/speciality"
@@ -51,34 +40,29 @@
             android:textColor="@color/darkgrey" />
 
         <TextView
-            android:id="@+id/PS"
+            android:id="@+id/proSpec"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/darkOrange" />
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:orientation="horizontal"
-        android:visibility="gone">
-
+        android:orientation="horizontal">
         <TextView
-            android:id="@+id/providerLoc"
+            android:id="@+id/AproviderLoc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
             android:text="@string/providerlocation"
-            android:textColor="@color/darkgrey"
-            android:visibility="gone"/>
+            android:textStyle="bold"
+            android:textColor="@color/darkgrey" />
 
         <TextView
-            android:id="@+id/PL"
+            android:id="@+id/proLoc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/darkOrange"
-            android:visibility="gone"/>
+            android:textColor="@color/darkOrange" />
     </LinearLayout>
 
     <LinearLayout
@@ -86,7 +70,26 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal">
+        <TextView
+            android:id="@+id/ApateLoc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/patientlocation"
+            android:textStyle="bold"
+            android:textColor="@color/darkgrey" />
 
+
+        <TextView
+            android:id="@+id/pateLoc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/darkOrange" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
         <ImageButton
             android:id="@+id/phone"
             android:layout_width="wrap_content"
@@ -94,7 +97,7 @@
             android:src="@drawable/phone" />
 
         <TextView
-            android:id="@+id/PP"
+            android:id="@+id/proNum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/darkOrange" />
@@ -103,8 +106,30 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/Date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/date"
+            android:textStyle="bold"
+            android:textColor="@color/darkgrey" />
 
+        <Button
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:background="@drawable/teal_button"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
         <TextView
             android:id="@+id/time"
             android:layout_width="wrap_content"
@@ -113,59 +138,33 @@
             android:textStyle="bold"
             android:textColor="@color/darkgrey" />
 
-        <TextView
-            android:id="@+id/CT"
+        <Button
+            android:id="@+id/Time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/darkOrange" />
+            android:textColor="@color/white"
+            android:background="@drawable/teal_button"/>
     </LinearLayout>
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/patientlocation"
-            android:textStyle="bold"
-            android:textColor="@color/darkgrey"/>
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        >
 
         <Button
-            android:id="@+id/CL"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/darkgrey"
-
-            android:text="@string/choose_location"
-            android:textColor="@color/white" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_gravity="center"
-        android:gravity="bottom"
-        android:layout_weight="1"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/confirm"
+            android:id="@+id/save_appointment"
             android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_weight="0.5"
             android:layout_height="wrap_content"
-            android:background="@color/darkOrange"
-            android:text="@string/confirm"
+            android:background="@drawable/teal_button"
+            android:text="@string/save"
             android:textColor="@color/white" />
 
-        <Button
-            android:id="@+id/cancel"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:background="@color/darkgrey"
-            android:text="@string/cancel"
-            android:textColor="@color/white" />
+
     </LinearLayout>
 </LinearLayout>

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/darkgrey"
     android:orientation="vertical"
-    tools:context="com.example.sanad.MyProfile">
+    tools:context=".MyProfile">
 
 
     <de.hdodenhof.circleimageview.CircleImageView

@@ -29,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseUser user;
     private boolean flag = true;
     static String LoggedIn_User_Email;
+    FirebaseUserMetadata metadata;
+    FirebaseUser currentUser;
 
     List<AuthUI.IdpConfig> providers = Arrays.asList(
             new AuthUI.IdpConfig.EmailBuilder().build(),
@@ -50,18 +52,18 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        FirebaseUser currentUser = mAuth.getCurrentUser();
+         currentUser = mAuth.getCurrentUser();
         //  updateUI(currentUser);
         if (currentUser != null) {
-            FirebaseUserMetadata metadata = mAuth.getCurrentUser().getMetadata();
+             metadata = mAuth.getCurrentUser().getMetadata();
             if (metadata.getCreationTimestamp() == metadata.getLastSignInTimestamp()) {
                 // The user is new, show them a fancy intro screen!
-                Intent intent = new Intent(this, Welcome.class);
+                Intent intent = new Intent(this, SignIn.class);
                 startActivity(intent);
                 finish();
             } else {
                 // This is an existing user, show them a welcome back screen.
-                Intent intent = new Intent(this, Home.class);
+                Intent intent = new Intent(this, Welcome.class);
                 startActivity(intent);
                 finish();
             }

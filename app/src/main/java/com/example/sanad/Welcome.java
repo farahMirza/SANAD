@@ -86,8 +86,7 @@ public class Welcome extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        Intent n = new Intent(Welcome.this, MainActivity.class);
-        startActivity(n);
+      finish();
     }
 }
 

@@ -12,7 +12,6 @@ public class Appointments {
     private String pate_location;
     private String prov_number;
     private String pat_number;
-
     private double lng;
     private double longt;
 
