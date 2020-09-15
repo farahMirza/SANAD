@@ -54,7 +54,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-inappmessaging-display:19.1.1'
     implementation 'com.android.support:support-annotations:28.0.0'
     implementation 'de.hdodenhof:circleimageview:2.2.0'
-    implementation 'com.onesignal:OneSignal:3.10.2'
+    implementation 'com.onesignal:OneSignal:3.10.1'
 
 
 

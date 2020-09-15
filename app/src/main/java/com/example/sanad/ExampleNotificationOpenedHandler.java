@@ -129,7 +129,7 @@ class ExampleNotificationOpenedHandler implements OneSignal.NotificationOpenedHa
                             user = FirebaseAuth.getInstance().getCurrentUser();
                             String send_email = point.getPatientID();
                             String strJsonBody = "{"
-                                    + "\"app_id\": \"f0d1c236-2c10-40c5-8990-28a903e05a0b\","
+                                    + "\"app_id\": \"02046bd2-1b21-466d-8a9b-1dd62a62702b\","
                                     + "\"filters\": [{\"field\": \"tag\", \"key\": \"User_ID\", \"relation\": \"=\", \"value\": \"" + send_email + "\"}],"
                                     + "\"data\": {\"foo\": \"bar\"},"
                                     + "\"contents\": {\"en\": \"" + msg + "\"},"
@@ -246,7 +246,7 @@ class ExampleNotificationOpenedHandler implements OneSignal.NotificationOpenedHa
                             String msg = point.getProvName() + " is not available at that time!";
                             String send_email = point.getPatientID();
                             String strJsonBody = "{"
-                                    + "\"app_id\": \"f0d1c236-2c10-40c5-8990-28a903e05a0b\","
+                                    + "\"app_id\": \"02046bd2-1b21-466d-8a9b-1dd62a62702b\","
                                     + "\"filters\": [{\"field\": \"tag\", \"key\": \"User_ID\", \"relation\": \"=\", \"value\": \"" + send_email + "\"}],"
                                     + "\"data\": {\"foo\": \"bar\"},"
                                     + "\"contents\": {\"en\": \"" + msg + "\"},"

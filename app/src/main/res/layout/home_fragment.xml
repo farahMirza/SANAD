@@ -149,7 +149,7 @@
                 android:id="@+id/myAgenda"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/darkgrey"
+                android:background="@drawable/teal_button"
                 android:drawableLeft="@drawable/appointment"
                 android:text="TODAY'S AGENDA "
                 android:textColor="@color/white" />

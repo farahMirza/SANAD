@@ -118,7 +118,7 @@ public class ReachingPatient extends AppCompatActivity {
                                 String msg = PROVIDER_HAS_BEEN_ARRIVED;
 
                                 String str = "{"
-                                        + "\"app_id\": \"f0d1c236-2c10-40c5-8990-28a903e05a0b\","
+                                        + "\"app_id\": \"02046bd2-1b21-466d-8a9b-1dd62a62702b\","
                                         + "\"filters\": [{\"field\": \"tag\", \"key\": \"User_ID\", \"relation\": \"=\", \"value\": \"" + send_email + "\"}],"
                                         + "\"data\": {\"foo\": \"bar\"},"
                                         + "\"contents\": {\"en\": \"" + msg + "\"},"
@@ -201,7 +201,7 @@ public class ReachingPatient extends AppCompatActivity {
                                 send_email = getIntent().getStringExtra("patId");
                                 String msg = VISIT_HAVE_BEEN_ENDED;
                                 String str = "{"
-                                        + "\"app_id\": \"f0d1c236-2c10-40c5-8990-28a903e05a0b\","
+                                        + "\"app_id\": \"02046bd2-1b21-466d-8a9b-1dd62a62702b\","
                                         + "\"filters\": [{\"field\": \"tag\", \"key\": \"User_ID\", \"relation\": \"=\", \"value\": \"" + send_email + "\"}],"
                                         + "\"data\": {\"foo\": \"bar\"},"
                                         + "\"contents\": {\"en\": \"" + msg + "\"},"
