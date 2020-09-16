@@ -112,7 +112,7 @@ public class MyProfile extends AppCompatActivity {
         //profile pic
         storage = FirebaseStorage.getInstance();
         user = FirebaseAuth.getInstance().getCurrentUser();
-        storageRef = storage.getReferenceFromUrl("gs://sanad-7f6ef.appspot.com").child(user.getUid());
+        storageRef = storage.getReferenceFromUrl("gs://sanad-7f6ef.appspot.com/images").child(user.getUid());
         try {
             final File localFile = File.createTempFile("images", "jpg");
             storageRef.getFile(localFile).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {

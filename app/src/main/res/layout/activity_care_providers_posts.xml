@@ -46,7 +46,7 @@
         android:id="@+id/CareProvider_List"
         android:divider="@color/grey"
         android:listSelector="@color/grey"
-        android:dividerHeight="8dp"
+        android:dividerHeight="3dp"
 
         />
 
