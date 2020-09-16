@@ -10,12 +10,16 @@ import com.firebase.ui.auth.IdpResponse;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.FirebaseUserMetadata;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.onesignal.OneSignal;
 import java.util.Arrays;
 import java.util.List;
-
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import com.firebase.ui.auth.AuthUI;
 import com.onesignal.OneSignal;
 
@@ -23,30 +27,29 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 public class MainActivity extends AppCompatActivity {
+    private String id;
     private static final int RC_SIGN_IN = 1;
     private FirebaseDatabase mFirebaseDatabase;
     private DatabaseReference mDatabaseReference;
-    private FirebaseAuth mAuth;
+    private FirebaseAuth mFirebaseAuth;
     private FirebaseUser user;
     private boolean flag = true;
     static String LoggedIn_User_Email;
-    FirebaseUserMetadata metadata;
-    FirebaseUser currentUser;
 
     List<AuthUI.IdpConfig> providers = Arrays.asList(
             new AuthUI.IdpConfig.EmailBuilder().build(),
-            new AuthUI.IdpConfig.PhoneBuilder().setDefaultCountryIso("jo").build(),
-            new AuthUI.IdpConfig.GoogleBuilder().build());
+            new AuthUI.IdpConfig.PhoneBuilder().build(),
+            new AuthUI.IdpConfig.GoogleBuilder().build()
 
+    );
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // initiate data base
         mFirebaseDatabase = FirebaseDatabase.getInstance();
         mDatabaseReference = mFirebaseDatabase.getReference("Users");
-        mAuth = FirebaseAuth.getInstance();
+        mFirebaseAuth = FirebaseAuth.getInstance();
         //one signal code
         OneSignal.startInit(this)
                 .inFocusDisplaying(OneSignal.OSInFocusDisplayOption.Notification)
@@ -54,92 +57,100 @@ public class MainActivity extends AppCompatActivity {
                 .setNotificationReceivedHandler(new ExampleNotificationReceivedHandler(getApplication()))
                 .unsubscribeWhenNotificationsAreDisabled(true)
                 .init();
+        //////
+
+
+        if (mFirebaseAuth.getCurrentUser() != null) {
+            Intent intent = new Intent(MainActivity.this, SignIn.class);
+            startActivity(intent);
+
+        } else {
+            //signing in
+            startActivityForResult(AuthUI.getInstance().
+                    createSignInIntentBuilder().
+                    setAvailableProviders(providers).
+                    setIsSmartLockEnabled(false).
+                    setLogo(R.drawable.sa_logo).
+                    build(), RC_SIGN_IN);
+
+
+        }
+
+
     }
 
-    // Check if user is signed in (non-null) and update UI accordingly.
+
+
     @Override
     protected void onStart() {
         super.onStart();
-         currentUser = mAuth.getCurrentUser();
-        //  updateUI(currentUser);
-        if (currentUser != null) {
-             metadata = mAuth.getCurrentUser().getMetadata();
-            if (metadata.getCreationTimestamp() == metadata.getLastSignInTimestamp()) {
-                // The user is new, show them a fancy intro screen!
-                Intent intent = new Intent(this, Welcome.class);
-                startActivity(intent);
-                Toast.makeText(this, "1", Toast.LENGTH_SHORT).show();
-                finish();
-            } else {
-                // This is an existing user, show them a welcome back screen.
-                Intent intent = new Intent(this, SignIn.class);
-                startActivity(intent);
-                Toast.makeText(this, "2", Toast.LENGTH_SHORT).show();
-                finish();
-            }
-
-        } else {
-            startActivityForResult(
-                    AuthUI.getInstance()
-                            .createSignInIntentBuilder()
-                            .setAvailableProviders(providers)
-                            .setLogo(R.drawable.sa_logo)      // Set logo drawable
-                            // Set theme
-                            .build(),
-                    RC_SIGN_IN);
-
-
-        }
 
 
     }
 
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        // RC_SIGN_IN is the request code you passed into startActivityForResult(...) when starting the sign in flow.
         if (requestCode == RC_SIGN_IN) {
-            IdpResponse response = IdpResponse.fromResultIntent(data);
 
-            // Successfully signed in
+
             if (resultCode == RESULT_OK) {
-                // you could determine if the user who just signed in is an existing or new one by comparing the user's creation and last sign-in time
-                FirebaseUserMetadata metadata = mAuth.getCurrentUser().getMetadata();
-                if (metadata.getCreationTimestamp() == metadata.getLastSignInTimestamp()) {
-                    // The user is new, show them a fancy intro screen!
-                    Intent intent = new Intent(this, Welcome.class);
-
-                    startActivity(intent);
-                    Toast.makeText(this, "3", Toast.LENGTH_SHORT).show();
-                    finish();
-                } else {
-                    // This is an existing user, show them a welcome back screen.
-                    Intent intent = new Intent(this, SignIn.class);
-                    startActivity(intent);
-                    Toast.makeText(this, "4", Toast.LENGTH_SHORT).show();
-                    finish();
-                }
 
 
-            } else {
-                // Sign in failed
-                if (response == null) {
-                    // User pressed back button
-                    Toast.makeText(this, "sign in problem", Toast.LENGTH_SHORT).show();
-                    return;
-                }
+// Read from the database
+                user = FirebaseAuth.getInstance().getCurrentUser();
 
-                if (response.getError().getErrorCode() == ErrorCodes.NO_NETWORK) {
-                    Toast.makeText(this, "sign in problem", Toast.LENGTH_SHORT).show();
+                mDatabaseReference = mFirebaseDatabase.getReference("Users");
 
-                    return;
-                }
+                mDatabaseReference.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        if (!dataSnapshot.exists()) {
+                            Intent intent = new Intent(MainActivity.this, Welcome.class);
+                            startActivity(intent);
+                        } else {
+                            FirebaseUser currentUser = mFirebaseAuth.getCurrentUser();
+                            OneSignal.sendTag("User_ID", user.getUid());
+                            for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
+                                Users u = postSnapshot.getValue(Users.class);
+                                if (u.getID().equals(currentUser.getUid())) {
 
-                Toast.makeText(this, "unknown error", Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(getApplicationContext(), SignIn.class);
+                                    LoggedIn_User_Email = u.getID();
+                                    startActivity(intent);
+                                    break;
+                                } else {
+                                    flag = false;
+                                }
+                                if (flag == false) {
+                                    Intent intent = new Intent(MainActivity.this, Welcome.class);
+                                    startActivity(intent);
+                                }
+                            }
 
-                Log.e("hk", "Sign-in error: ", response.getError());
+                        }
+                        user = FirebaseAuth.getInstance().getCurrentUser();
+
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError error) {
+                        // Failed to read value
+                        Log.w("", "Failed to read value.", error.toException());
+                    }
+                });
+
+
+            } else if (resultCode == RESULT_CANCELED) {
+                Toast.makeText(this, "signed in cancelled", Toast.LENGTH_LONG).show();
+                finish();
+                System.exit(0);
+
             }
+
         }
+
+
     }
 }

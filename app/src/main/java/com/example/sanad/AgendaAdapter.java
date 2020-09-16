@@ -28,21 +28,25 @@ public class AgendaAdapter extends ArrayAdapter<Appointments> {
 
         }
         currentApgendaItem = getItem(position);
-        TextView patname = (TextView) listItemView.findViewById(R.id.agenda_name);
+
+        TextView patname = (TextView) listItemView.findViewById(R.id.agendapatientName);
         if (currentApgendaItem != null) {
             patname.setText(currentApgendaItem.getPatientName());
         }
+
         TextView pat_loc = (TextView) listItemView.findViewById(R.id.agendaLoc);
         if (currentApgendaItem != null) {
-            patname.setText(currentApgendaItem.getPate_location());
+            pat_loc.setText(currentApgendaItem.getPate_location());
         }
+
         TextView date = (TextView) listItemView.findViewById(R.id.agendaDate);
         if (currentApgendaItem != null) {
-            patname.setText(currentApgendaItem.getDate());
+            date.setText(currentApgendaItem.getDate());
         }
+
         TextView time = (TextView) listItemView.findViewById(R.id.agendaTime);
         if (currentApgendaItem != null) {
-            patname.setText(currentApgendaItem.getTime());
+            time.setText(currentApgendaItem.getTime());
         }
         return listItemView;
     }

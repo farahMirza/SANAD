@@ -22,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@drawable/teal_button"
+        android:background="@drawable/orange_button"
         android:drawableBottom="@drawable/phone"
         android:drawableTint="@color/white"
         android:text="@string/call_patient"

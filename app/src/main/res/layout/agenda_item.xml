@@ -3,106 +3,94 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
-    <TextView
-        android:id="@+id/agenda_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/name"
-        android:textColor="@color/darkgrey"
-        android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/agendaNameView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/darkOrange" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
 
-</LinearLayout><LinearLayout
-android:layout_height="0dp"
-android:layout_weight="1"
-android:layout_width="match_parent"
-android:orientation="horizontal">
-<TextView
-    android:id="@+id/AgendalocView"
-    android:layout_height="wrap_content"
-    android:layout_width="wrap_content"
-    android:text="Patient Location:"
-    android:textColor="@color/darkgrey"
-    android:textStyle="bold" />
-
-<TextView
-    android:id="@+id/agendaLoc"
-    android:layout_height="wrap_content"
-    android:layout_width="wrap_content"
-    android:textColor="@color/darkOrange" />
-</LinearLayout>
-<LinearLayout
-android:layout_height="0dp"
-android:layout_weight="1"
-android:layout_width="match_parent"
-android:orientation="horizontal">
-<TextView
-    android:id="@+id/agendaDate"
-    android:layout_height="wrap_content"
-    android:layout_width="wrap_content"
-    android:text="Date:"
-    android:textColor="@color/darkgrey"
-    android:textStyle="bold" />
-
-<TextView
-    android:id="@+id/agendaDateView"
-    android:layout_height="wrap_content"
-    android:layout_width="wrap_content"
-    android:textColor="@color/darkOrange" />
-</LinearLayout>
-<LinearLayout
-android:layout_height="0dp"
-android:layout_weight="1"
-android:layout_width="match_parent"
-android:orientation="horizontal">
-<TextView
-    android:id="@+id/agendapatientName"
-    android:layout_height="wrap_content"
-    android:layout_width="wrap_content"
-    android:text="@string/patient_name"
-    android:textColor="@color/darkgrey"
-    android:textStyle="bold" />
+        <TextView
+            android:id="@+id/AgendaPatientNameView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/patient_name"
+            android:textColor="@color/darkgrey"
+            android:textStyle="bold" />
 
 
-<TextView
-    android:id="@+id/AgendaPatientNameView"
-    android:layout_height="wrap_content"
-    android:layout_width="wrap_content"
-    android:textColor="@color/darkOrange" />
-</LinearLayout>
-<LinearLayout
-android:layout_height="0dp"
-android:layout_weight="1"
-android:layout_width="match_parent"
-android:orientation="horizontal">
-<TextView
-    android:id="@+id/agendaTime"
-    android:layout_height="wrap_content"
-    android:layout_width="wrap_content"
-    android:text="Time:"
-    android:textColor="@color/darkgrey"
-    android:textStyle="bold" />
-
-
-<TextView
-    android:id="@+id/APatientLocationView"
-    android:layout_height="wrap_content"
-    android:layout_width="wrap_content"
-    android:textColor="@color/darkOrange" />
-</LinearLayout>
+        <TextView
+            android:id="@+id/agendapatientName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/darkOrange" />
+    </LinearLayout>
 
 
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
 
+        <TextView
+            android:id="@+id/AgendalocView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Patient Location:"
+            android:textColor="@color/darkgrey"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/agendaLoc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/darkOrange" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/agendaDateView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date:"
+            android:textColor="@color/darkgrey"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/agendaDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/darkOrange" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/APatienttimeView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time:"
+            android:textColor="@color/darkgrey"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/agendaTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/darkOrange" />
+    </LinearLayout>
 
 
 </LinearLayout>

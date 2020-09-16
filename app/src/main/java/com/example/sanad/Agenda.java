@@ -10,6 +10,7 @@ import android.preference.PreferenceManager;
 
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -30,7 +31,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 
-public class Agenda extends AppCompatActivity {
+public class Agenda extends AppCompatActivity implements AdapterView.OnItemClickListener {
     private ListView lst;
     private DatabaseReference ref;
  //    static int hour, minute;
@@ -95,6 +96,7 @@ public class Agenda extends AppCompatActivity {
                 }
                AgendaAdapter adapter = new AgendaAdapter(Agenda.this, appoints);
                lst.setAdapter(adapter);
+               lst.setOnItemClickListener(Agenda.this);
             }
 
 
@@ -114,4 +116,18 @@ public class Agenda extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+        Appointments appo = appoints.get(i);
+        Intent intent = new Intent(this,ReachingPatient.class);
+
+        intent.putExtra("patId", appo.getPatientID());
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(Agenda.this);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("ApointTime", appo.getTime());
+        editor.putString("ApointDate", appo.getDate());
+        editor.putString("addrs", appo.getPate_location());
+        editor.apply();
+        startActivity(intent);
+    }
 }

@@ -3,6 +3,7 @@ package com.example.sanad;
 import android.app.Application;
 import android.content.Intent;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.onesignal.OSNotification;
 import com.onesignal.OneSignal;
@@ -32,6 +33,7 @@ class ExampleNotificationReceivedHandler implements OneSignal.NotificationReceiv
 
             }
             if (msg.equals(VISIT_HAVE_BEEN_ENDED)) {
+                Toast.makeText(application, "hi", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(application, RatingProvider.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT | Intent.FLAG_ACTIVITY_NEW_TASK);
                 application.startActivity(intent);

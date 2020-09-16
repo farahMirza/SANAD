@@ -66,9 +66,9 @@ public class RatingProvider extends AppCompatActivity {
         ProvFees = prefs.getString("Fees", "");
         //doctor picture
         storage = FirebaseStorage.getInstance();
-        storageRef = storage.getReferenceFromUrl("gs://sanad-7d768.appspot.com/images").child(ProvID);
+        storageRef = storage.getReferenceFromUrl("gs://sanad-7f6ef.appspot.com").child(ProvID);
         try {
-            final File localFile = File.createTempFile("images", "jpg");
+            final File localFile = File.createTempFile("images", "jpeg");
             storageRef.getFile(localFile).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
                 @Override
                 public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
