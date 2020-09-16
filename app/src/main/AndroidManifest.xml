@@ -43,6 +43,7 @@
         <activity android:name=".MyProfile"/>
         <activity android:name=".ProviderPlace"/>
         <activity android:name=".Providers"/>
+        <activity android:name=".Agenda"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

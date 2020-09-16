@@ -296,7 +296,7 @@ class ExampleNotificationOpenedHandler implements OneSignal.NotificationOpenedHa
                         con.setDoInput(true);
 
                         con.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
-                        con.setRequestProperty("Authorization", "Basic OGUzYWYzMTItZjI1NC00ODk2LTllMzEtOTMyODZlMmEzYTg1");
+                        con.setRequestProperty("Authorization", "Basic Y2I5MzkwZmMtZTcwMy00Mzc3LWFjMDgtOGIxYWY4Y2ZjNjlh");
                         con.setRequestMethod("POST");
                         String strJsonBody = str;
                         System.out.println("strJsonBody:\n" + strJsonBody);

@@ -187,7 +187,7 @@ public class ConformationActivity extends AppCompatActivity {
                         con.setDoInput(true);
 
                         con.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
-                        con.setRequestProperty("Authorization", "Basic OGUzYWYzMTItZjI1NC00ODk2LTllMzEtOTMyODZlMmEzYTg1");
+                        con.setRequestProperty("Authorization", "Basic Y2I5MzkwZmMtZTcwMy00Mzc3LWFjMDgtOGIxYWY4Y2ZjNjlh");
                         con.setRequestMethod("POST");
 
                         String strJsonBody = "{"

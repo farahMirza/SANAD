@@ -65,6 +65,9 @@ public class Agenda extends AppCompatActivity {
                for (DataSnapshot postsnapshot : dataSnapshot.getChildren()) {
                    Appointments appointments = postsnapshot.getValue(Appointments.class);
                    if (appointments.getProviderID().equals(user.getUid())) {
+                       if(appointments.getPatientID()==null){
+                           Toast.makeText(Agenda.this, "no appointments today", Toast.LENGTH_SHORT).show();
+                       }else{
                         appoints.add(appointments);
                         addr = appointments.getPate_location();
                         date0 = appointments.getDate();
@@ -83,6 +86,7 @@ public class Agenda extends AppCompatActivity {
                             appoints.remove(appointments);
                             continue;
                         }
+                       }
 
 
 
